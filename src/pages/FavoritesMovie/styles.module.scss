@@ -1,0 +1,29 @@
+.favorite {
+  padding: 20px;
+  background-color: #f9f9f9;
+
+  &__title {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  &__noFavorites {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #555;
+  }
+
+  &__error {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #d9534f;
+  }
+
+  &__movieList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}

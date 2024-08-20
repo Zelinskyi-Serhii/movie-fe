@@ -1,0 +1,29 @@
+.header {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  padding: 20px;
+  background-color: aquamarine;
+
+  a {
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+
+    &.active {
+      background-color: darkcyan;
+      color: white;
+    }
+
+    &:hover:not(.active) {
+      background-color: lightseagreen;
+      color: white;
+    }
+  }
+}

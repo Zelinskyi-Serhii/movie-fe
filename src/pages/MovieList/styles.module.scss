@@ -1,0 +1,88 @@
+@import '../../styles/mixins.scss';
+
+.movieList {
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+
+  &__top {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+
+    @include onMobile {
+      flex-direction: column;
+    }
+  }
+
+  .addNewBtn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+  
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+
+  .searchLabel {
+    flex: 1;
+    display: block;
+    margin-bottom: 20px;
+    font-size: 18px;
+
+    .searchInput {
+      display: block;
+      width: 100%;
+      padding: 8px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-top: 8px;
+    }
+  }
+
+  .movieGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      margin: 0 10px;
+      cursor: pointer;
+      border-radius: 4px;
+
+      &:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+      }
+    }
+
+    span {
+      font-size: 16px;
+    }
+  }
+}
